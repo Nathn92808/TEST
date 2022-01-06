@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Nathan's website</title> 
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+
+        </script>
+        <style>
+            body{ background-color:#4C84F4; }
+           h1{
+               font-size: 65px;
+               font-family: 'Times New Roman', Times, serif;
+               text-align:center
+               padding= 10px;
+           }
+           
+           p{font-family:'Times New Roman', Times, serif;}
+           #name {
+               color:rgb(0, 0, 0)
+           }
+           #age{
+               color:rgb(0, 0, 0)
+           }
+           #birthday{
+               color:rgb(0, 0, 0)
+           }
+           #colors{
+               color:rgb(0, 0, 0)
+           }
+           #hobbies{
+               color:rgb(0, 0, 0)
+           }
+
+           .title{
+               float: left;
+               width:100%;
+               margin: 3px 0;
+               line-height: 24px;
+               text-align: center;
+           }
+
+           .title:after, .title:before{
+               backface-visibility: hidden;
+               border: 0.5px solid black;
+               bottom: 0px;
+               content: '';
+               display: block;
+               margin: 0 auto;
+               position: relative;
+               transition: all 280ms ease-in-out;
+               width: 0;
+
+           }
+
+           .title:hover:after, .title:hover:before{
+               backface-visibility: hidden;
+               border-color: black;
+               transition: all 500ms ease-in-out;
+               width:40%;
+           }
+
+           .title:hover:before{
+               bottom:0;
+               top:0;
+               width:40%;
+           }
+           .header{
+               width:35%;
+               height:70px;
+               position:absolute;
+               left:2050px;
+               top:50px;
+
+           }
+           .header> button{
+               display: inline-flex;
+           }
+
+           button{
+               background:none;
+               border:2px solid white;
+               line-height: 1;
+               margin: 0.5px;
+               padding: 1em 2em;
+               transition: 0.3s;
+               color:white;
+           }
+
+           .bdbtn:hover, .btdbtn:focus{
+               box-shadow: inset 0px 0px 9px 2em aquamarine;
+           }
+
+           .banner{
+               position:relative;
+               height:600px;
+               width: 2560px;
+               background-image:url("https://wallpaperaccess.com/full/3423638.jpg");
+               background-size: 100%;
+               background-position: center 0;
+               background-repeat: no-repeat;
+               background-attachment: fixed;
+               font-size: 100px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               color: whitesmoke;    
+           }
+
+           .section{
+               margin-left:1000px;
+               position: relative;
+               width:750px;
+           }
+        </style>
+    </header>
+  <body>
+      <div class ="banner">
+          Nathan Chow Nok Hang
+          <script type = "text/javascript">
+               $title = $('.banner')
+               var num = 100;
+               var scroll, zoom;
+               $(window).scroll(function(event){
+                scroll = $(window).scrollTop()
+               zoom = num + scroll/30
+               $title.css('background-size',zoom+'%')
+});
+
+          </script>
+      </div>
+      <div class = "header">
+        <button class = "bdbtn" onclick="document.location = './page.html'"> 
+        Picture Gallery
+    </button> 
+    <button class = "bdbtn" onclick = "document.location = './page/contact.html'">
+  Contact page 
+</button>
+</div>
+      <div class ="section">
+      <div class ="title">
+        <h1>About me:D </h1>
+      </div>
+     
+        <table>
+            
+                
+            <tr>
+                <td> 
+                    <img src="Screenshot 2021-12-16 at 4.21.17 PM.png" style="width:500px;"/> 
+                </td>
+                <td> 
+                    <p id="name"><b>Name: Nathan Chow Nok Hang</b></p>
+                    <hr/>
+                    <p id="age">Age: 13</p>
+                    <hr/>
+                    <p id="birthday">Birthday: Sep 28 2008</p>
+                    <hr/>
+                    <p id="colors">Favourite colors: Blue & Black</p>
+                    <hr/>
+                    <p id="hobbies">Hobbies: Ice hockey & Playing video games</p>
+                </td>
+            </tr>
+        </table>
+        <h2>Previous coding projects</h2>
+        <table border="3">
+            <thead>
+                <th>Platform</th>
+                <th>Project</th>
+            </thead>
+            <tr>
+                <td>Mincraft Java</td>
+                <td>
+                    <ul>
+                        <li>Lucky Block Race </li>
+                        <li>House </li>
+                        <li>Hunger games </li>
+                    </ul> 
+                </td>
+            </tr>
+            <tr>
+                <td>Scratch</td>
+                <td>
+                    <ul>
+                        <li>Platformer/Parkour Course </li>
+                        <li>Ping pong 2 player game </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <a href="https://scratch.mit.edu/projects/454995405/">Go to one of my games!</a>
+        <h3> My favourite movie </h3>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ob7fPOzbmzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+         </div>
+         <a href="file:///Users/nathanchow/Desktop/My%201st%20website/page/contact.html">Contact me </a>
+</div>
+  </body>  
+</html>
